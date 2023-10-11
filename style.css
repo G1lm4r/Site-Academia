@@ -1,0 +1,235 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    /*background-color: rgb(63, 63, 149);*/
+    background-color: rgb(2, 4, 45);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-bar{
+    position: fixed;
+
+}
+
+.logo{
+    height: 120px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+  
+a:hover {
+    opacity: 0.7;
+}
+  
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #23232e63;
+    height: 8vh;
+    width: 100vw;
+    margin-top: -8vh;
+}
+  
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+  
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+  
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+  
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+#welcome{
+    background: url("./imagens/parede\ de\ concreto.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /*height: 40vh;*/
+    padding: 10% 20px;
+    /*margin-bottom: 30px;*/
+    color: rgb(255, 255, 255);
+    text-align: center;
+    /*text-shadow: rgb(0, 0, 0) 1px 2px;*/
+}
+.header{
+    background: url("./imagens/cabeçalhocg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px; 
+    /*margin-top: 8vh;*/
+}
+.content{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.part1{
+    background: url("./imagens/parede\ de\ concreto.jpg");
+    color: white;
+    font-style: italic;
+    font-size: large;
+    text-align: justify;
+    padding: 5%;
+    background-attachment: fixed;
+}
+.picmotiv{
+    width: 100%;
+}
+
+#local{
+    margin: 30px 0;
+}
+
+.acad{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.acad1{
+    width: 40vw;
+    border: white solid 2px;
+}
+.aval{
+    max-width: 50vw;
+    margin: 20px 0;
+    border: white solid 2px;
+}
+iframe{
+    margin: 20px 0;
+}
+
+.horafunc{
+    /*background: url("./imagens/parede\ de\ concreto.jpg");*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: large;
+    padding: 5%;
+}
+.contact{
+    color: rgb(255, 144, 59);
+    font-size: larger;
+    margin: auto;
+    margin-bottom: 5%;
+    max-width: 80vw;
+}
+.footer{
+    background: url("./imagens/parede\ de\ concreto.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 5%;
+    padding-bottom: 1px;
+}
+.linksfooter{
+    list-style: none;
+    line-height: 2em;
+    font-size: large;
+}
+.footer2 ul{
+    color: white;
+    list-style: none; 
+}
+
+.icon ul{
+    display: flex;
+}
+.icon img{
+    width: 50px;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 50%;
+    border: rgb(255, 255, 255) solid 2px;
+}
+
+@media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      margin-top: -8vh;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #23232ed4;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .logo{
+        height: 10vh;
+    }
+    .header{
+        height: 20vh;
+    }
+    .mobile-menu {
+      display: block;
+    }
+    iframe{
+        width: 90%;
+        border: white solid 2px
+    }
+    .aval{
+        min-width: 90vw;
+    }
+}
+  
+.nav-list.active {
+    transform: translateX(0);
+}
+  
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
